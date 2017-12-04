@@ -34,13 +34,16 @@
 
 	<p> {{$comment['name']}}</p>
 	<p> {{$comment['comment']}}</p> 
+
+@if (Auth::user() && (Auth::user()->id == $comment['user_id']))
 <div class="row text-center">
-    <div class='col-lg-6'>  
+  <div class='col-lg-6'>  
     <a href="{{route('delete', $comment['id'] )}}">
       <button type="submit" class="btn btn-danger pull-right">Delete</button>
     </a>
   </div>
 </div>
+@endif
 <hr>
 @endforeach
 @else

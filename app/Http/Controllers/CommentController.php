@@ -28,15 +28,15 @@ class CommentController extends Controller
  	return back();
  
    }
-   public function delete($id){
+  public function delete($id){
 
-   	$comment = Comment::find($id);
+    $comment = Comment::find($id);
 
-   	if (Auth::user() && (Auth::user()->id == $comment->user_id)) {
-    Comment::where('id',$id)->delete();
-    return back();
-	}else{
-	return 'you dont have permission';
-	}
-}
+    if (Auth::user() && (Auth::user()->id == $comment->user_id)) {
+      Comment::where('id',$id)->delete();
+      return back();
+	 }else{
+	   return 'you dont have permission';
+	 }
+  }
 }

@@ -18,7 +18,7 @@ class RecipeController extends Controller
 
     	foreach($comments as $comment){
     		$user = User::find($comment->user_id);
-    		$displaycomments[] = ['comment' => $comment->comment, 'name' => $user->name, 'id' => $comment->id];
+    		$displaycomments[] = ['comment' => $comment->comment, 'name' => $user->name, 'id' => $comment->id, 'user_id' => $comment->user_id];
 		}
 		//return $displaycomments;
 
