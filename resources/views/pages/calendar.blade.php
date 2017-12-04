@@ -41,11 +41,11 @@
   <li>13</li>
   <li>14</li>
   <li>15</li>
-  <li><a href="pancakes.php"><img class="pannkakor" src="pannkakor.jpg" alt="American Pancakes"></a></li>
+  <li><a href="/blog/public/recipe/1"><img class="pannkakor" src={{ asset('img/Pancakes.jpg') }} alt="American Pancakes"></a></li>
   <li>17</li>
   <li>18</li>
   <li>19</li>
-  <li><a href="veggieballs.php"><img class="vegobullar" src="vegobullar.jpeg" alt="Vegan Meatballs"></a></li>
+  <li><a href="/blog/public/recipe/3"><img class="vegobullar" src={{ asset('img/Veggieballs.jpg') }} alt="Vegan Meatballs"></a></li>
   <li>21</li>
   <li>22</li>
   <li>23</li>
