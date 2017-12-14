@@ -20,5 +20,8 @@ class PagesController extends Controller
     public function login(){
     	return view ('pages.login');
     }
+    public function commentbox(){
+        return view ('pages.commentbox');
+    }
 
 }

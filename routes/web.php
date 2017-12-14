@@ -20,7 +20,9 @@ Route::get('recipe/{recipeid}', 'RecipeController@recipe')->name('recipe');
 
 Route::post('recipe/{recipeid}/comment', 'CommentController@store')->name('commentrecipe');
 
-Route::get('delete/{id}', 'CommentController@delete')->name('delete');
+Route::get('recipe/{recipeid}/comment', 'CommentController@get');
+
+Route::post('delete/{id}', 'CommentController@delete')->name('delete');
 
 Route::get('/login', 'PagesController@login');
 

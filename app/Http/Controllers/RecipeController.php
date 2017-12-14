@@ -13,15 +13,12 @@ class RecipeController extends Controller
     public function recipe($recipeid){
 
     	$recipe = Recipe::find($recipeid);
-    	$comments = Comment::where('recipe_id', $recipeid)->get();
     	$displaycomments = array();
-
-    	foreach($comments as $comment){
-    		$user = User::find($comment->user_id);
-    		$displaycomments[] = ['comment' => $comment->comment, 'name' => $user->name, 'id' => $comment->id, 'user_id' => $comment->user_id];
-		}
-		//return $displaycomments;
-
-    	return view('pages.recipe', ['recipe' => $recipe->recipe, 'ingredients' => $recipe->ingredients, 'description' => $recipe->description, 'comments' => $displaycomments, 'id' => $recipe->id]);
+    	
+        return view('pages.recipe', ['recipe' => $recipe->recipe, 'ingredients' => $recipe->ingredients, 'description' => $recipe->description, 'id' => $recipe->id]);
     }
 }
+
+
+    
+
